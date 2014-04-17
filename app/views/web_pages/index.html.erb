@@ -1,0 +1,12 @@
+<%= form_for WebPage.new do |f| %>
+  <%= f.label :full_url %>
+  <%= f.text_field :full_url %>
+  <%= f.submit %>
+<% end %>
+
+<% @web_pages.each do |web_page|%>
+
+  <%= link_to web_page.full_url %> | <%= link_to web_page_url(web_page.shortened_url), web_page_url(web_page.shortened_url) %>
+  <br>
+
+<% end %>
