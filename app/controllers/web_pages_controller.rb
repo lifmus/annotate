@@ -6,7 +6,7 @@ class WebPagesController < ApplicationController
   def create
     @web_page = WebPage.new(params[:web_page].permit(:full_url))
     if @web_page.save
-      flash[:success] = "Status updated!"
+      flash[:success] = "Link created!"
     else
       flash[:error] = @web_page.errors.empty? ? "Error" : @web_page.errors.full_messages.to_sentence
     end

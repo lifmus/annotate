@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   root to: "web_pages#index"
   
-  resources :web_pages
+  resources :web_pages, :comments
 end
